@@ -433,6 +433,25 @@ def base_architecture(args):
     args.decoder_dropout_out = getattr(args, 'decoder_dropout_out', args.dropout)
 
 
+@register_model_architecture('lstm', 'lstm-maggie1')
+def lstm_maggie1(args):
+    args.dropout = getattr(args, 'dropout', 0.2)
+    args.encoder_embed_dim = getattr(args, 'encoder_embed_dim', 512)
+    args.encoder_embed_path = getattr(args, 'encoder_embed_path', None)
+    args.encoder_hidden_size = getattr(args, 'encoder_hidden_size', 1024)
+    args.encoder_layers = getattr(args, 'encoder_layers', 1)
+    args.encoder_bidirectional = getattr(args, 'encoder_bidirectional', False)
+    args.encoder_dropout_in = getattr(args, 'encoder_dropout_in', args.dropout)
+    args.encoder_dropout_out = getattr(args, 'encoder_dropout_out', args.dropout)
+    args.decoder_embed_dim = getattr(args, 'decoder_embed_dim', 512)
+    args.decoder_embed_path = getattr(args, 'decoder_embed_path', None)
+    args.decoder_hidden_size = getattr(args, 'decoder_hidden_size', 1024)
+    args.decoder_layers = getattr(args, 'decoder_layers', 1)
+    args.decoder_out_embed_dim = getattr(args, 'decoder_out_embed_dim', 512)
+    args.decoder_attention = getattr(args, 'decoder_attention', '1')
+    args.decoder_dropout_in = getattr(args, 'decoder_dropout_in', args.dropout)
+    args.decoder_dropout_out = getattr(args, 'decoer_dropout_out', args.dropout)
+
 @register_model_architecture('lstm', 'lstm_wiseman_iwslt_de_en')
 def lstm_wiseman_iwslt_de_en(args):
     args.dropout = getattr(args, 'dropout', 0.1)
