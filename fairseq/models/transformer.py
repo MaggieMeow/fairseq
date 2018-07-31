@@ -438,7 +438,7 @@ def base_architecture(args):
     args.share_all_embeddings = getattr(args, 'share_all_embeddings', False)
 
 @register_model_architecture('transformer', 'transformer_liling')
-def transformer_iwslt_de_en(args):
+def transformer_liling(args):
     args.attention_dropout = getattr(args, 'attention_dropout', 0.2)
     args.encoder_layers = getattr(args, 'encoder_layers', 4)
     args.decoder_layers = getattr(args, 'decoder_layers', 4)
