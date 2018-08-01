@@ -505,7 +505,8 @@ def lstm_maggie1(args):
     args.decoder_out_embed_dim = getattr(args, 'decoder_out_embed_dim', 512)
     args.decoder_attention = getattr(args, 'decoder_attention', '1')
     args.decoder_dropout_in = getattr(args, 'decoder_dropout_in', args.dropout)
-    args.decoder_dropout_out = getattr(args, 'decoer_dropout_out', args.dropout)
+    args.decoder_dropout_out = getattr(args, 'decoder_dropout_out', args.dropout)
+    base_architecture(args)
 
 @register_model_architecture('lstm', 'lstm_wiseman_iwslt_de_en')
 def lstm_wiseman_iwslt_de_en(args):
